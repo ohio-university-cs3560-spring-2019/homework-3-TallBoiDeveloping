@@ -1,0 +1,23 @@
+\documentclass[12 pt] {article}
+\usepackage[latin1] {inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+
+\title{CS 3560 HomeWork 3 - Standard Deviation Report}
+\data{2/11/19}
+\author{Matt Albrinck}
+
+\begin{document}
+\maketitle
+
+$s=\sqrt{\frac{2}{N-1}\sum_{i=1}^N(x_i-\bar{x})^2}$. This is the equation for the Standard Deviation of the preset array data values.
+$s$ is the variable for standard deviation.
+$N$ is the number of values in the array.
+$x_i$ is the $i$th element in the set.
+$\overline$ is the average of the data set
+
+\end{document}
+
