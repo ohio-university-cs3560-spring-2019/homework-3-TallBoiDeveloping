@@ -1,0 +1,51 @@
+\hypertarget{hw__broken_8cc}{}\section{hw\+\_\+broken.\+cc File Reference}
+\label{hw__broken_8cc}\index{hw\_broken.cc@{hw\_broken.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{hw__broken_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}{deviation}} (int $\ast$a, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hw__broken_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}\label{hw__broken_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}} 
+\index{hw\_broken.cc@{hw\_broken.cc}!deviation@{deviation}}
+\index{deviation@{deviation}!hw\_broken.cc@{hw\_broken.cc}}
+\subsubsection{\texorpdfstring{deviation()}{deviation()}}
+{\footnotesize\ttfamily double deviation (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+/brief This funciton calculates the standard deviation for a preset array of integers /param a \+: This is the array of values /param n \+: This is the variables for the numerical values in the array /return Returns the Standard Deviation 
+
+Definition at line 13 of file hw\+\_\+broken.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{   \textcolor{comment}{//initializes the sum to be 0}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{double} sum=0;}
+\DoxyCodeLine{16     \textcolor{comment}{//for loop that adds up all of the data in the array}}
+\DoxyCodeLine{17     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i <= n-1; i++)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         sum += a[i];}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21     \textcolor{comment}{//calculates the mean(average)}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{double} mean = sum /= n;}
+\DoxyCodeLine{23     \textcolor{comment}{//initializes the standard deviation to be 0}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{double} stddev = 0;}
+\DoxyCodeLine{25     \textcolor{comment}{//calculates the bulk of the standard deviation}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i <= n - 1; i++)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         stddev += (a[i] - mean) * (a[i] - mean); }
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \textcolor{comment}{//statement to see if there is an error and the standard deviation is 0}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if}( stddev == 0)}
+\DoxyCodeLine{32         std::cout << \textcolor{stringliteral}{"Sigma is zero."} << std::endl;}
+\DoxyCodeLine{33     \textcolor{comment}{//sets value to return the final standard deviation}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{double} \textcolor{keyword}{final} = sqrt(stddev/n);}
+\DoxyCodeLine{35     \textcolor{comment}{//returns the answer to the calculation}}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \textcolor{keyword}{final};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
