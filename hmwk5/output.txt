@@ -1,0 +1,5 @@
+ 20  67 483 hw5.py
+  5  12  73 hw5.sh
+  2   8  38 output.txt
+  5   5  20 test.txt
+ 32  92 614 total
